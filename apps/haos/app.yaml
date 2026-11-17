@@ -1,0 +1,37 @@
+schemaVersion: 1
+id: haos
+name: Home Assistant OS
+version: "14.1"
+description: Home Assistant as a full VM appliance.
+category: home
+homepage: https://www.home-assistant.io
+icon: icon.svg
+runtime: qemu
+qemu:
+  image:
+    url: https://github.com/home-assistant/operating-system/releases/download/14.1/haos_ova-14.1.qcow2.xz
+    sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+    format: qcow2
+    compression: xz
+  machine:
+    arch: x86_64
+    cpus: 2
+    memory: 2048
+    disk: 32G
+    uefi: true
+  network:
+    mode: user
+    forward:
+      - { host: 8123, guest: 8123, proto: tcp }
+inputs:
+  - key: HOST_PORT
+    label: Web port
+    type: port
+    default: 8123
+    binds: qemu.network.forward[0].host
+requirements:
+  cpu: 2
+  ram: 2048
+  disk: 32G
+  arch:
+    - amd64

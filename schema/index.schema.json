@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ModernSelfHost/openappstore/schema/index.schema.json",
+  "title": "openappstore index",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "apps"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "apps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "version", "category", "description", "runtime", "icon", "manifest", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "category": { "type": "string" },
+          "description": { "type": "string" },
+          "runtime": { "type": "string", "enum": ["compose", "qemu"] },
+          "icon": { "type": ["string", "null"] },
+          "manifest": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    }
+  }
+}

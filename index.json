@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-17T04:42:34Z",
+  "apps": [
+    {
+      "id": "haos",
+      "name": "Home Assistant OS",
+      "version": "14.1",
+      "category": "home",
+      "description": "Home Assistant as a full VM appliance.",
+      "runtime": "qemu",
+      "icon": "apps/haos/icon.svg",
+      "manifest": "apps/haos/app.yaml",
+      "sha256": "d223cbfaac0f5748d716ceda20aeebf0dcf90a3eb2d8ff2f47048cfe0cc0cdcf"
+    },
+    {
+      "id": "jellyfin",
+      "name": "Jellyfin",
+      "version": "10.10.7",
+      "category": "media",
+      "description": "Free software media system for streaming your media anywhere.",
+      "runtime": "compose",
+      "icon": "apps/jellyfin/icon.svg",
+      "manifest": "apps/jellyfin/app.yaml",
+      "sha256": "7118a50df3472a18474934594cb6b7fa702515b2c37ba97d5015cf28b7bd2a44"
+    },
+    {
+      "id": "vaultwarden",
+      "name": "Vaultwarden",
+      "version": "1.32.0",
+      "category": "security",
+      "description": "Lightweight Bitwarden-compatible password manager server.",
+      "runtime": "compose",
+      "icon": "apps/vaultwarden/icon.svg",
+      "manifest": "apps/vaultwarden/app.yaml",
+      "sha256": "f494e5b34f76a0aaa5220c199fc79a9d2ac9bdef2e40914b57ddd2eb3f9659f3"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:10.10.7
+    container_name: jellyfin
+    ports:
+      - "${PORT}:8096"
+    volumes:
+      - "${CONFIG_PATH}:/config"
+      - "${MEDIA_PATH}:/media"
+    restart: unless-stopped

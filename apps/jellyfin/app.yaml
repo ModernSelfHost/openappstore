@@ -1,0 +1,33 @@
+schemaVersion: 1
+id: jellyfin
+name: Jellyfin
+version: 10.10.7
+description: Free software media system for streaming your media anywhere.
+category: media
+homepage: https://jellyfin.org
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: MEDIA_PATH
+    label: Media folder
+    type: path
+    default: /mnt/media
+    required: true
+    help: Host folder containing your media library.
+  - key: CONFIG_PATH
+    label: Config folder
+    type: path
+    default: /mnt/jellyfin-config
+  - key: PORT
+    label: Web port
+    type: port
+    default: 8096
+requirements:
+  cpu: 2
+  ram: 1024
+  disk: 10G
+  arch:
+    - amd64
+    - arm64

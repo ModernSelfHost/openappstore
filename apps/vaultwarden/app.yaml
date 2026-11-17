@@ -1,0 +1,32 @@
+schemaVersion: 1
+id: vaultwarden
+name: Vaultwarden
+version: 1.32.0
+description: Lightweight Bitwarden-compatible password manager server.
+category: security
+homepage: https://github.com/dani-garcia/vaultwarden
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/vaultwarden
+  - key: PORT
+    label: Web port
+    type: port
+    default: 80
+  - key: ADMIN_TOKEN
+    label: Admin token
+    type: password
+    generate: true
+    help: Leave empty to auto-generate a random admin token.
+requirements:
+  cpu: 1
+  ram: 256
+  disk: 1G
+  arch:
+    - amd64
+    - arm64
