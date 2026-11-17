@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: immich
+name: Immich
+version: "1.118.0"
+description: High performance self-hosted photo and video management.
+category: media
+homepage: https://immich.app
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: UPLOAD_LOCATION
+    label: Upload folder
+    type: path
+    default: /mnt/immich
+  - key: DB_PASSWORD
+    label: Database password
+    type: password
+    generate: true
+  - key: WEB_PORT
+    label: Web port
+    type: port
+    default: 2283
+requirements:
+  cpu: 2
+  ram: 4096
+  disk: 50G
+  arch:
+    - amd64

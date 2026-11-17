@@ -1,0 +1,9 @@
+services:
+  syncthing:
+    image: syncthing/syncthing:1.27.12
+    container_name: syncthing
+    ports:
+      - "${PORT}:8384"
+    volumes:
+      - "${DATA_PATH}:/var/syncthing"
+    restart: unless-stopped

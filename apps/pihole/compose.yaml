@@ -1,0 +1,15 @@
+services:
+  pihole:
+    image: pihole/pihole:2024.07.0
+    container_name: pihole
+    ports:
+      - "${DNS_PORT}:53/tcp"
+      - "${DNS_PORT}:53/udp"
+      - "${WEB_PORT}:80"
+    volumes:
+      - "${DATA_PATH}/etc-pihole:/etc/pihole"
+      - "${DATA_PATH}/etc-dnsmasq.d:/etc/dnsmasq.d"
+    environment:
+      - TZ=${TZ}
+      - WEBPASSWORD=${WEBPASSWORD}
+    restart: unless-stopped

@@ -1,0 +1,31 @@
+schemaVersion: 1
+id: gitea
+name: Gitea
+version: "1.22.3"
+description: Lightweight self-hosted Git service.
+category: dev
+homepage: https://gitea.io
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/gitea
+  - key: PORT
+    label: Web port
+    type: port
+    default: 3000
+  - key: SSH_PORT
+    label: SSH port
+    type: port
+    default: 2222
+requirements:
+  cpu: 1
+  ram: 512
+  disk: 5G
+  arch:
+    - amd64
+    - arm64

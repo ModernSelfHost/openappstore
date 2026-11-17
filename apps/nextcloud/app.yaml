@@ -1,0 +1,31 @@
+schemaVersion: 1
+id: nextcloud
+name: Nextcloud
+version: "29.0.8"
+description: Self-hosted productivity platform for files, calendars, and collaboration.
+category: files
+homepage: https://nextcloud.com
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/nextcloud
+  - key: PORT
+    label: Web port
+    type: port
+    default: 8080
+  - key: DB_PASSWORD
+    label: Database password
+    type: password
+    generate: true
+requirements:
+  cpu: 2
+  ram: 1024
+  disk: 20G
+  arch:
+    - amd64
+    - arm64

@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: paperless-ngx
+name: Paperless-ngx
+version: "2.14.5"
+description: Document management system that transforms paper into searchable archive.
+category: files
+homepage: https://docs.paperless-ngx.com
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/paperless
+  - key: PORT
+    label: Web port
+    type: port
+    default: 8000
+  - key: SECRET_KEY
+    label: Secret key
+    type: password
+    generate: true
+requirements:
+  cpu: 2
+  ram: 2048
+  disk: 20G
+  arch:
+    - amd64

@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: uptime-kuma
+name: Uptime Kuma
+version: "1.23.16"
+description: Fancy self-hosted monitoring tool like Uptime Robot.
+category: monitoring
+homepage: https://uptime.kuma.pet
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/uptime-kuma
+  - key: PORT
+    label: Web port
+    type: port
+    default: 3001
+requirements:
+  cpu: 1
+  ram: 256
+  disk: 1G
+  arch:
+    - amd64
+    - arm64

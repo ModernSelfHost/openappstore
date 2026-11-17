@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: portainer
+name: Portainer
+version: "2.21.4"
+description: Lightweight management UI for Docker environments.
+category: dev
+homepage: https://www.portainer.io
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/portainer
+  - key: PORT
+    label: HTTPS port
+    type: port
+    default: 9443
+requirements:
+  cpu: 1
+  ram: 256
+  disk: 1G
+  arch:
+    - amd64
+    - arm64

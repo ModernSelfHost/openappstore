@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: grafana
+name: Grafana
+version: "11.2.2"
+description: Open source analytics and monitoring platform.
+category: monitoring
+homepage: https://grafana.com
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/grafana
+  - key: PORT
+    label: Web port
+    type: port
+    default: 3000
+requirements:
+  cpu: 1
+  ram: 256
+  disk: 2G
+  arch:
+    - amd64
+    - arm64

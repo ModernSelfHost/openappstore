@@ -1,0 +1,35 @@
+schemaVersion: 1
+id: traefik
+name: Traefik
+version: "3.1.6"
+description: Modern HTTP reverse proxy and load balancer.
+category: network
+homepage: https://traefik.io
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: CONFIG_PATH
+    label: Config folder
+    type: path
+    default: /mnt/traefik
+  - key: HTTP_PORT
+    label: HTTP port
+    type: port
+    default: 80
+  - key: HTTPS_PORT
+    label: HTTPS port
+    type: port
+    default: 443
+  - key: DASHBOARD_PORT
+    label: Dashboard port
+    type: port
+    default: 8080
+requirements:
+  cpu: 1
+  ram: 128
+  disk: 1G
+  arch:
+    - amd64
+    - arm64

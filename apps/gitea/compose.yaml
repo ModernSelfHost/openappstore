@@ -1,0 +1,10 @@
+services:
+  gitea:
+    image: gitea/gitea:1.22.3
+    container_name: gitea
+    ports:
+      - "${PORT}:3000"
+      - "${SSH_PORT}:22"
+    volumes:
+      - "${DATA_PATH}:/data"
+    restart: unless-stopped

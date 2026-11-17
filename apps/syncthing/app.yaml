@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: syncthing
+name: Syncthing
+version: "1.27.12"
+description: Continuous file synchronization across devices.
+category: files
+homepage: https://syncthing.net
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/syncthing
+  - key: PORT
+    label: Web port
+    type: port
+    default: 8384
+requirements:
+  cpu: 1
+  ram: 256
+  disk: 1G
+  arch:
+    - amd64
+    - arm64

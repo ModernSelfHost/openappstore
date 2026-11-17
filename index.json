@@ -1,7 +1,40 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T04:42:34Z",
+  "generatedAt": "2026-11-17T04:46:47Z",
   "apps": [
+    {
+      "id": "adguard-home",
+      "name": "AdGuard Home",
+      "version": "0.107.54",
+      "category": "network",
+      "description": "Network-wide ads and trackers blocking DNS server.",
+      "runtime": "compose",
+      "icon": "apps/adguard-home/icon.svg",
+      "manifest": "apps/adguard-home/app.yaml",
+      "sha256": "fa93cc2904aafaf13b3b0cf63e65f9448b8eb472cc17e6f58fe0d3739fcbd199"
+    },
+    {
+      "id": "gitea",
+      "name": "Gitea",
+      "version": "1.22.3",
+      "category": "dev",
+      "description": "Lightweight self-hosted Git service.",
+      "runtime": "compose",
+      "icon": "apps/gitea/icon.svg",
+      "manifest": "apps/gitea/app.yaml",
+      "sha256": "e62f5bc5bd8149b5d4c5dc695004505e51aad0c7f86b77f5a8cd4708b11fe7b1"
+    },
+    {
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "11.2.2",
+      "category": "monitoring",
+      "description": "Open source analytics and monitoring platform.",
+      "runtime": "compose",
+      "icon": "apps/grafana/icon.svg",
+      "manifest": "apps/grafana/app.yaml",
+      "sha256": "30dcc1434bd8c192e2f1ce031754d95e2ecb8a1d4e9f3dcdc3d6a2bd6caf29a1"
+    },
     {
       "id": "haos",
       "name": "Home Assistant OS",
@@ -14,6 +47,17 @@
       "sha256": "d223cbfaac0f5748d716ceda20aeebf0dcf90a3eb2d8ff2f47048cfe0cc0cdcf"
     },
     {
+      "id": "immich",
+      "name": "Immich",
+      "version": "1.118.0",
+      "category": "media",
+      "description": "High performance self-hosted photo and video management.",
+      "runtime": "compose",
+      "icon": "apps/immich/icon.svg",
+      "manifest": "apps/immich/app.yaml",
+      "sha256": "7aae98d9f0779265fd454753a3bb9686c22c72c0608813322b6e9db5b4a08164"
+    },
+    {
       "id": "jellyfin",
       "name": "Jellyfin",
       "version": "10.10.7",
@@ -23,6 +67,94 @@
       "icon": "apps/jellyfin/icon.svg",
       "manifest": "apps/jellyfin/app.yaml",
       "sha256": "7118a50df3472a18474934594cb6b7fa702515b2c37ba97d5015cf28b7bd2a44"
+    },
+    {
+      "id": "nextcloud",
+      "name": "Nextcloud",
+      "version": "29.0.8",
+      "category": "files",
+      "description": "Self-hosted productivity platform for files, calendars, and collaboration.",
+      "runtime": "compose",
+      "icon": "apps/nextcloud/icon.svg",
+      "manifest": "apps/nextcloud/app.yaml",
+      "sha256": "23373fd2470b7e812c661343a787d09ba3e1234fd8733f48ee1385cceceba6b4"
+    },
+    {
+      "id": "nginx-proxy-manager",
+      "name": "Nginx Proxy Manager",
+      "version": "2.12.3",
+      "category": "network",
+      "description": "Manage Nginx proxy hosts with a simple web interface.",
+      "runtime": "compose",
+      "icon": "apps/nginx-proxy-manager/icon.svg",
+      "manifest": "apps/nginx-proxy-manager/app.yaml",
+      "sha256": "18750590fab7d4c7cb29ba4ae3a6b4fe9ac1f04402cbc548022e119e30a1e34e"
+    },
+    {
+      "id": "paperless-ngx",
+      "name": "Paperless-ngx",
+      "version": "2.14.5",
+      "category": "files",
+      "description": "Document management system that transforms paper into searchable archive.",
+      "runtime": "compose",
+      "icon": "apps/paperless-ngx/icon.svg",
+      "manifest": "apps/paperless-ngx/app.yaml",
+      "sha256": "88047cca0d9d37df4560dbb3307f2cedb7f11b3dbf52731cf8aeecaadf9b95ec"
+    },
+    {
+      "id": "pihole",
+      "name": "Pi-hole",
+      "version": "2024.07.0",
+      "category": "network",
+      "description": "Network-wide ad blocking via your own DNS server.",
+      "runtime": "compose",
+      "icon": "apps/pihole/icon.svg",
+      "manifest": "apps/pihole/app.yaml",
+      "sha256": "b7eac943f903b74726b79c447f1a6cfc4c97807da4e7eceee79249f6c0cb1764"
+    },
+    {
+      "id": "portainer",
+      "name": "Portainer",
+      "version": "2.21.4",
+      "category": "dev",
+      "description": "Lightweight management UI for Docker environments.",
+      "runtime": "compose",
+      "icon": "apps/portainer/icon.svg",
+      "manifest": "apps/portainer/app.yaml",
+      "sha256": "44033ef242df3b27ea33011f6ca1009037b63bd4f40f04400629c3d95733b7dd"
+    },
+    {
+      "id": "syncthing",
+      "name": "Syncthing",
+      "version": "1.27.12",
+      "category": "files",
+      "description": "Continuous file synchronization across devices.",
+      "runtime": "compose",
+      "icon": "apps/syncthing/icon.svg",
+      "manifest": "apps/syncthing/app.yaml",
+      "sha256": "045a885ec0dba4573e72dd0eab3191f5d43da955f677fea055dc3c36f3c5dc90"
+    },
+    {
+      "id": "traefik",
+      "name": "Traefik",
+      "version": "3.1.6",
+      "category": "network",
+      "description": "Modern HTTP reverse proxy and load balancer.",
+      "runtime": "compose",
+      "icon": "apps/traefik/icon.svg",
+      "manifest": "apps/traefik/app.yaml",
+      "sha256": "717af07d2f0859fdccddc6c302abd3bba4d6bd9ff4ba5db7e1c17c2b4beeafed"
+    },
+    {
+      "id": "uptime-kuma",
+      "name": "Uptime Kuma",
+      "version": "1.23.16",
+      "category": "monitoring",
+      "description": "Fancy self-hosted monitoring tool like Uptime Robot.",
+      "runtime": "compose",
+      "icon": "apps/uptime-kuma/icon.svg",
+      "manifest": "apps/uptime-kuma/app.yaml",
+      "sha256": "0fa94bf8773c950ca5919f238aa13d76d7bea355b25809288b8be276c96443fd"
     },
     {
       "id": "vaultwarden",

@@ -1,0 +1,31 @@
+schemaVersion: 1
+id: adguard-home
+name: AdGuard Home
+version: "0.107.54"
+description: Network-wide ads and trackers blocking DNS server.
+category: network
+homepage: https://adguard.com/adguard-home.html
+icon: icon.svg
+runtime: compose
+compose:
+  file: compose.yaml
+inputs:
+  - key: DATA_PATH
+    label: Data folder
+    type: path
+    default: /mnt/adguard
+  - key: DNS_PORT
+    label: DNS port
+    type: port
+    default: 53
+  - key: WEB_PORT
+    label: Web port
+    type: port
+    default: 3000
+requirements:
+  cpu: 1
+  ram: 256
+  disk: 1G
+  arch:
+    - amd64
+    - arm64
